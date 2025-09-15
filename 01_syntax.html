@@ -1,12 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CSS 기초</title>
-</head>
-<body>
+    <style>
+      p {
+        color: red;
+      }
+    </style>
+    <link rel="stylesheet" href="style.css" />
+    <!-- 동일한 우선도의 선택자라면 나중에 나오는게 최종적으로 적용된다. -->
+  </head>
+  <body>
     <!-- html 기본 양식이 !로 작성된 상황에서 우클릭 (open with live server) -->
-     <p>인라인 스타일 : CSS 관련 문법이 style attribute를 통해 요소(element)에 직접 적용 (특정 요소에만 적용되어 재사용성이 떨어짐)</p>
-</body>
+    <p>
+      인라인 스타일 : CSS 관련 문법이 style attribute를 통해 요소(element)에
+      직접 적용 (특정 요소에만 적용되어 재사용성이 떨어짐)
+    </p>
+  </body>
 </html>
