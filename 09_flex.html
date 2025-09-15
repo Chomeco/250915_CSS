@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flex</title>
+    <style>
+      .container {
+        /* flex container */
+        /* overflowL hidden; */
+        display: flex;
+        gap: 10px;
+        /* 하위 요소들을 flex화 시켜줌 */
+      }
+      .box {
+        /* flex item */
+        display: inline-block;
+        width: 100px;
+        background-color: whitesmoke;
+        border: 1px black solid;
+      }
+      .wrap {
+        /* 넘칠 시 줄바꿈 */
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+      .column_reverse {
+        flex-direction: column-reverse;
+      }
+      .row_reverse {
+        flex-direction: row-reverse;
+      }
+      /* 주축 Main axis */
+      .justify-contents {
+        /* 주축은 여백이 계속 존재하도록 배치한다 */
+        /* justify-content: center; */
+        /* justify-content: start; */
+        /* justify-content: end; */
+        /* [] 1 [] 2 [] 3 [] 4 [] 5 [] */
+        /* 각각 flex item들의 width를 빼고, 남은 여백을 왼쪽부터 똑같이 배분한다 */
+        justify-content: space-between;
+      }
+      /* 교차축 Cross axis */
+      .align-items {
+        /* align-items: start; */
+        /* align-items: end; */
+        align-items: center;
+        height: 240px;
+      }
+    </style>
+  </head>
+  <body>
+    <hr />
+    <div class="container wrap align-items">
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+    </div>
+    <hr />
+    <div style="height: 50vh" class="container justify-contents column_reverse">
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+      <div class="box">4</div>
+      <div class="box">5</div>
+      <div class="box">6</div>
+    </div>
+    <hr />
+    <div
+      style="
+        width: 256px;
+        aspect-ratio: 1;
+        background-color: bisque;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      "
+    >
+      <img width="64" src="cat.png" alt="abc" />
+    </div>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil aliquid
+    minima esse dolorem magni aliquam qui magnam temporibus tempora sequi,
+    quisquam nesciunt perferendis dignissimos non aspernatur beatae distinctio
+    iusto eos.
+  </body>
+</html>
